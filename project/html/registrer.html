@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrer</title>
+    <meta property="og:title" content="Chartertur Divine"/>
+    <meta name="description" content="Billige charterturer"/>
+    <meta name="keywords" content="Chartertur, Spania, Italia, Tyrkia, Hellas"/>
+    <meta name="author" content="Snorre Strand, Julie Solem & Yvonne Soltveit"/>
+    <meta property="og:description" content="Billige charterturer til fire destinasjoner"/>
+    <meta property="og:image" content="../res/logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Iconer fra fontawesome og material -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <link href="../css/formStyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- navbar blir initialisert on load -->
+<div id="nav-placeholder"></div>
+
+<div class="jumbotron jumbotron-fluid text-center">
+    <h1>Registrer ny medlem</h1>
+</div>
+
+
+<div class="container">
+    <form name="register" class="needs-validation"
+          action="http://www.iie.ntnu.no/fag/webutvikling1/prosjekt/behandle.php" novalidate>
+        <div class="row spacing">
+            <label class="control-label required" for="brukernavn"> Brukernavn<sup style="color:red">*</sup></label>
+            <input id="brukernavn" name="brukernavn" type="text" class="form-control"
+                   placeholder="Skriv inn ditt brukernavn" onblur="return validateBrukernavn()" required>
+            <div class="invalid-feedback" id="feilbrukernavn">
+                Brukernavnet må være mellom 5-20 tegn.
+            </div>
+        </div>
+        <div class="row spacing">
+            <label class="control-label required" for="telefon">Telefonnummer <span
+                    class="text-muted">(Valgfritt)</span></label>
+            <input id="telefon" name="telefon" type="text" class="form-control"
+                   placeholder="Skriv inn ditt telefonnummer" onblur="return validateTelefon()">
+            <div class="invalid-feedback" id="feiltelefon">
+                Skriv inn ett gyldig telefonnummer.
+            </div>
+        </div>
+        <div class="row spacing">
+            <label class="control-label required" for="mail">Email<sup style="color:red">*</sup></label>
+            <input id="mail" name="epost" type="email" class="form-control" placeholder="Skriv inn din email" required>
+            <div class="invalid-feedback">
+                Vennligst tast inn en gyldig e-postadresse.
+            </div>
+        </div>
+        <div class="row spacing">
+            <label class="control-label required" for="passord">Passord<sup style="color:red">*</sup></label>
+            <input id="passord" name="password" onblur="return validatePassord()" type="password" class="form-control"
+                   placeholder="Passord" required>
+            <div class="invalid-feedback">
+                Passordet må være mellom 5-20 tegn.
+            </div>
+        </div>
+        <div class="row spacing">
+            <label class="control-label required" for="gjentaPassord">Bekreft passord<sup
+                    style="color:red">*</sup></label>
+            <input id="gjentaPassord" type="password" class="form-control"
+                   placeholder="Gjenta passord" onblur="return validatePassord()" required>
+            <div class="invalid-feedback" id="feilpassord">
+                Passordet må være likt.
+            </div>
+        </div>
+        <div class="row spacing">
+            <label class="checkbox-inline">
+                <input id="tilbud" type="checkbox" value="tilbud" checked><span
+                    class="label-text">Få tilbud på mail</span>
+            </label>
+
+        </div>
+        <div class="row spacing">
+            <button class="btn btn-primary btn-block">Registrer</button>
+            <a href="index.html" class="btn btn-block btn-secondary" id="cancelBtn">Avbryt </a>
+        </div>
+    </form>
+</div>
+
+<!-- footer blir initialisert on load -->
+<div id="footer-placeholder"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
+<script src="../js/formScript.js"></script>
+<script src="../js/mainScript.js"></script>
+</body>
+</html>

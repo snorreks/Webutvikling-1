@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+body {
+    font-family: Arial;
+    padding: 20px;
+    background-color: yellow;
+    background: #dddddd;
+    margin: 0;
+}
+
+/*header kallenavn for overskriften*/
+.header {
+    background-color: #888888;
+    font-size: 40px;
+    padding: 30px;
+    text-align: center;
+}
+
+/*topnav (linkene på toppen) ------------------*/
+
+.topnav {
+    overflow: hidden;
+    background: #555555;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/*når du hovrer over linkene (a)*/
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/*Hoved inndeling av sida ----------------------------*/
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/*Kolonner på sidene*/
+
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #555555;
+    padding-left: 20px;
+}
+
+/*Fjerner flaots etter column*/
+
+/*mellom del i kollonnene*/
+.card {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Nederst på siden*/
+.footer {
+    padding: 5px;
+    text-align: center;
+    background: #888888;
+    margin-top: 2px;
+}
+
+/*Kolonnene stakker oppåhverandre når
+skjermen blir mindre enn 800pix*/
+@media (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .topnav a {
+        float: none;
+        padding: 100%;
+    }
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+
+ul.a {
+    list-style-type: circle;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Øving 2: Webutvikling</title>
+</head>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    h3 {
+        text-decoration: #222222 underline;
+    }
+
+    h2 {
+        font-style: oblique;
+        color: midnightblue;
+
+    }
+</style>
+<body>
+<h1> Øving 2: HTML </h1>
+<hr>
+<h3>Destinasjonsanker:</h3>
+<ol type="i">
+    <li><a href="#O1">Overskrift 1</a></li>
+    <li><a href="#O2">Overskrift 2</a></li>
+    <li><a href="#L">Linker</a></li>
+    <li><a href="#L1">Liste om Trondheim</a></li>
+    <li><a href="#L2">Liste om datamaskinens komponenter</a></li>
+    <li><a href="#Tab">Tabell om regn</a></li>
+    <li><a href="#Dog">Bilder</a></li>
+    <ul>
+        <li><a href="#C1">Hund 1</a></li>
+        <li><a href="#C2">Hund 2</a></li>
+        <li><a href="#C3">Hund 3</a></li>
+        <li><a href="#C4">Hund 4</a></li>
+    </ul>
+</ol>
+
+<h2 id="O1">Overskrift 1: </h2>
+<p>Dette her er den første paragrafen </p>
+<h2 id="O2">Overskrift 2:</h2>
+<p>Dette her er den andre paragrafen</p>
+<h3 id="L">Linker:</h3>
+<!--<a href="http://folk.ntnu.no/snorreks/wu1/Oving2/Extra.html"> Ekstra side</a> -->
+<a href="extra.html"> Ekstra side</a>
+<br>
+<a href="http://ntnu.no" target="_blank"> NTNU</a>
+<br>
+<!--         <img src="Pic/VG.png" alt="VG" style="width: calc(100% - 500px); overflow: auto; border: 0;">-->
+<br>
+<a href="http://vg.no" style="text-decoration: none">
+    <img src="Pic/VG.png" alt="VG" style="width: 150px; overflow: auto; border: 0;">
+</a>
+<br>
+<br>
+<h3 id="L1">Liste om hvorfor Trondheim er nice:</h3>
+<ol type="1">
+    <li>Bra studentby</li>
+    <li>Har Superhero Burger</li>
+    <ul>
+        <li>En hamburger fastfood restaurant</li>
+        <li>Billig øl og bra hamburgerne ;:^)</li>
+    </ul>
+    <li>Kan se havet</li>
+    <li>Sentralt</li>
+    <li>Mange folk</li>
+</ol>
+<br>
+<h3 id="L2">Definisjonsliste om datamaskinens komponenter:</h3>
+<dl>
+    <dt>RAM</dt>
+    <dd>- Datamaskinens minne</dd>
+    <dt>CPU</dt>
+    <dd>- Prosesseringsenheten</dd>
+    <dd>- Utfører instruksjonene i et dataprogram</dd>
+    <dt>GPU</dt>
+    <dd>- Behandler grafikkdata</dd>
+    <dt>HDD og SDD</dt>
+    <dd>- Lagringsplass for datamaskin</dd>
+</dl>
+
+<h3 id="Tab" style="">Tabell:</h3>
+<table style="width: 100%">
+    <caption>Månedsnedbør</caption>
+    <tr>
+        <th></th>
+        <th>Oslo</th>
+        <th>Bergen</th>
+        <th>Trondheim</th>
+        <th>Tromsø</th>
+    </tr>
+    <tr>
+        <th>Juni</th>
+        <td> 4,2</td>
+        <td> 2,1</td>
+        <td> 5,2</td>
+        <td>0.4</td>
+    </tr>
+    <tr>
+        <th>Juli</th>
+        <td> 1,2</td>
+        <td> 6,1</td>
+        <td> 3,2</td>
+        <td>0.9</td>
+    </tr>
+    <tr>
+        <th>August</th>
+        <td> 6,1</td>
+        <td> 7,2</td>
+        <td> 2,5</td>
+        <td> 6,4</td>
+    </tr>
+</table>
+
+<h3 id="Dog">Bilder:</h3>
+<p id="C1">Hund 1:</p>
+<img src="Pic/dog1.png" alt="Dog1">
+<p id="C2">Hund 2:</p>
+<img src="Pic/dog2.png" at="Dog2">
+<p id="C3">Hund 3:</p>
+<img src="Pic/dog3.png" alt="Dog3">
+<p id="C4">Hund 4:</p>
+<img src="Pic/dog4.png" alt="Dog4" style="width: 500px; overflow: auto; border: 0;">
+<br>
+<hr>
+<p1> Snorre K. Strand 31.01.2018 13:47</p1>
+</body>
+</html>

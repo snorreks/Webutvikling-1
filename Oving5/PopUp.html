@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        function closeThis() {
+            close();
+        }
+
+        function showBrowser() {
+            document.write(navigator.appCodeName);
+        }
+
+        function showDate() {
+            let d = new Date();
+            document.write(d.toLocaleString());
+        }
+
+        function load() {
+            document.title = "Tittel";
+
+            document.write("<h2>Hello</h2>");
+            document.write("<div style='white-space: pre'>Tiden er nå:</div>");
+            showDate();
+            document.write("<br><br>");
+
+            document.write("<div style='white-space: pre'>Nettleseren du bruker er:</div>");
+            showBrowser();
+            document.write("<div style='white-space: pre'>(Mozilla er app code name for Chrome, Firefox, IE, Safari og Opera) </div>");
+
+            document.write("<div align='center'> <button onclick='document.getElementById(\"close\").innerHTML=self.close()'> Close</button>" +
+                "<p id='close'></p></div>");
+            setTimeout("self.close()", 3500);
+        }
+    </script>
+</head>
+<body onload="load()">
+
+
+<script>
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <style>
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+
+        if (document.images) {
+            doggoOver = new Image();
+            doggoOver.src = "Pic/dog.22.png";
+            doggoOut = new Image();
+            doggoOut.src = "Pic/dog21.png";
+            pupperOver = new Image();
+            pupperOver.src = "Pic/dog10.png";
+            pupperOut = new Image();
+            pupperOut.src = "Pic/dog18.png";
+            dogsOver = new Image();
+            dogsOver.src = "Pic/dogGif2.gif";
+            dogsOut = new Image();
+            dogsOut.src = "Pic/dog20.png";
+        }
+
+        function popUpCenter(url, title, w, h) {
+            let left = (screen.width / 2) - (w / 2);
+            let top = (screen.height / 2) - (h / 2);
+            return window.open(url, title, 'toolbar=no, fullscreen=yes, location=no,directories=no,' +
+                'status=no,menubar=no,scrollbars=no,resizable=no, copyhistory=no,' +
+                'width=' + w + ',height=' + h + ', top=' + top + ', left=' + left);
+        }
+
+        function mouseOver(imgName) {
+            if (document.images) {
+                document[imgName].src = eval(imgName + "Over.src");
+            }
+        }
+
+        function mouseOut(imgName) {
+            if (document.images) {
+                document[imgName].src = eval(imgName + "Out.src");
+            }
+        }
+
+        function picChange(x, pic_name) {
+            x.src = pic_name;
+            x.style.width = '100px';
+            x.style.height = '80px';
+        }
+    </script>
+</head>
+<body onload="popUpCenter('PopUp.html','lol',450,190)">
+
+<h2 class="centerText">Øving 5</h2>
+<p id="demo"></p>
+
+
+<div>
+    <a href="https://www.reddit.com/r/rarepuppers/"
+       onmouseover="mouseOver( 'pupper' )"
+       onmouseout="mouseOut( 'pupper' )"
+    >
+        <img class="doggers" src="Pic/dog18.png" name="pupper">
+    </a>
+    <br>
+
+    <a href="https://www.reddit.com/r/doggos/"
+       onmouseover="mouseOver( 'doggo' )"
+       onmouseout="mouseOut( 'doggo' )"
+    >
+        <img class="doggers" src="Pic/dog21.png" name="doggo">
+    </a>
+    <br>
+    <a href="https://www.reddit.com/r/dogpictures/"
+       onmouseover="mouseOver( 'dogs' )"
+       onmouseout="mouseOut( 'dogs' )"
+    >
+        <img class="doggers" src="Pic/dog20.png" name="dogs">
+    </a>
+</div>
+
+
+</body>
+</html>

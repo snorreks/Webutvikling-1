@@ -1,0 +1,32 @@
+.doggers {
+    width: 200px;
+    height: 180px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: groove;
+    margin-left: 40%;
+
+}
+
+.centerText {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+body {
+    font-family: Arial;
+    font-size: 100px;
+    background-color: yellow;
+    background: #dddddd;
+    margin: 0;
+}
+
+div {
+    overflow: auto;
+    padding: 2px;
+}
+
+a {
+    text-decoration: none;
+}

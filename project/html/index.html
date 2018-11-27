@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Chartertur Divine</title>
+    <meta property="og:title" content="Chartertur Divine"/>
+    <meta name="description" content="Billige charterturer"/>
+    <meta name="keywords" content="Chartertur, Spania, Italia, Tyrkia, Hellas"/>
+    <meta name="author" content="Snorre Strand, Julie Solem & Yvonne Soltveit"/>
+    <meta property="og:description" content="Billige charterturer til fire destinasjoner"/>
+    <meta property="og:image" content="../res/logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Iconer fra fontawesome og material -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Datepicker -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css"
+          rel="stylesheet">
+    <link href="../css/formStyle.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<!-- navbar blir initialisert on load -->
+<div id="nav-placeholder"></div>
+
+<div class="jumbotron jumbotron-fluid text-center">
+    <h1>Chartertur Divine</h1>
+    <p>Se våre tilbud</p>
+</div>
+
+<div class="container" id="searchbar">
+    <form>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="destinasjonFra"><i class="fa fa-map-marker" aria-hidden="true"></i> Avreise sted</label>
+                <select name="avreisested" class="form-control" id="destinasjonFra">
+                    <option value="trondheim">Trondheim</option>
+                    <option value="oslo">Oslo</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label class="control-label required" for="datepicker"><i class="fa fa-calendar" aria-hidden="true"></i>
+                    Dato fra</label>
+                <input class="date form-control" type="text" id="datepicker" name="datofra" placeholder="DD/MM/YYYY">
+            </div>
+            <div class="col-md-4">
+                <label for="antallPersoner"><i class="fa fa-user" aria-hidden="true"></i> Antall personer</label>
+                <select class="form-control" id="antallPersoner">
+                    <option selected>En person</option>
+                    <option value="1">To person</option>
+                    <option value="2">Tre personer</option>
+                    <option value="3">Fire personer</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="destinasjonSted"><i class="fa fa-map-marker" aria-hidden="true"></i> Destinasjon til</label>
+                <select name="destinasjonSted" class="form-control" id="destinasjonSted">
+                    <option selected="selected" value="alle">Alle steder</option>
+                    <option value="spania">Spania</option>
+                    <option value="tyrkia">Tyrkia</option>
+                    <option value="italia">Italia</option>
+                    <option value="hellas">Hellas</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="varighet"><i class="fa fa-calendar" aria-hidden="true"></i> Varighet</label>
+                <select name="varighet" class="form-control" id="varighet">
+                    <option value="1">En uke</option>
+                    <option value="2">To uker</option>
+                    <option value="3">Tre uker</option>
+                    <option value="4">Fire uker</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label class="checkbox-inline">
+                    <input id="hotellCheckBox" type="checkbox" value="hotell" checked><span
+                        class="label-text searchCheck">Hotell</span>
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="leilighetCheckBox" name="check" checked> <span
+                        class="label-text searchCheck">Leilighet</span>
+                </label>
+            </div>
+        </div>
+    </form>
+    <br>
+    <div class="row">
+        <button class="btn" id="searchBtn">Søk</button>
+        <!-- I teorien ville denne formen bli sendt og håndtet med php til å vise brukeren hoteller/leiligheter som tilsvarer
+             det brukeren ønsker å se, men nå blir formen ikke sendt -->
+    </div>
+</div>
+<hr>
+<div class="container" id="stederListe">
+    <!-- SPANIA -->
+    <div class="alle hotell spania trondheim">
+        <h2>Alicante spa & resort</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Spania hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 2500kr</h3>
+                <h3>&#9733;&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Trondheim</h3>
+                <h3>Destinasjon: Spania</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/alicanteHotell.html" class="btn btn-default btn-lg" role="button">Se
+                    hotell</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="alle hotell spania oslo">
+        <h2>Marbella spa & resort</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Spania hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 9890kr</h3>
+                <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Oslo</h3>
+                <h3>Destinasjon: Spania</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/marbellaHotell.html" class="btn btn-default btn-lg" role="button">Se
+                    hotell</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="alle spania leilighet oslo">
+        <h2>Alicante apartments</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Spania hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 3500kr</h3>
+                <h3>&#9733;&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Oslo</h3>
+                <h3>Destinasjon: Spania</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/alicanteLeilighet.html" class="btn btn-default btn-lg"
+                   role="button">Se leilighet</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="alle spania leilighet trondheim">
+        <h2>Barcelona apartments</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Spania hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 2500kr</h3>
+                <h3>&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Trondheim</h3>
+                <h3>Destinasjon: Spania</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/barcelonaLeilighet.html" class="btn btn-default btn-lg"
+                   role="button">Se leilighet</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tyrkia -->
+    <div class="alle tyrkia hotell trondheim">
+        <h2>Antalya spa & resort</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Tyrkia hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 4500kr</h3>
+                <h3>&#9733;&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Trondheim</h3>
+                <h3>Destinasjon: Tyrkia</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/antalyaHotell.html" class="btn btn-default btn-lg" role="button">Se hotell</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="alle tyrkia hotell oslo">
+        <h2>Side spa & resort</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Tyrkia hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 5000kr</h3>
+                <h3>&#9733;&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Oslo</h3>
+                <h3>Destinasjon: Tyrkia</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/sideHotell.html" class="btn btn-default btn-lg" role="button">Se hotell</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="alle tyrkia leilighet trondheim">
+        <h2>Antalya apartments</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Tyrkia hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 3200kr</h3>
+                <h3>&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Trondheim</h3>
+                <h3>Destinasjon: Tyrkia</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/antalyaLeilighet.html" class="btn btn-default btn-lg"
+                   role="button">Se leilighet</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="alle tyrkia leilighet oslo">
+        <h2>Side apartments</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Tyrkia hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 6800kr</h3>
+                <h3>&#9733;&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Oslo</h3>
+                <h3>Destinasjon: Tyrkia</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/sideLeilighet.html" class="btn btn-default btn-lg" role="button">Se
+                    leilighet</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hellas -->
+    <div class="alle hellas hotell oslo">
+        <h2>Mykonos spa & resort</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Hellas hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 5500kr</h3>
+                <h3>&#9733;&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Oslo</h3>
+                <h3>Destinasjon: Hellas</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/mykonosHotell.html" class="btn btn-default btn-lg" role="button">Se hotell</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="alle hellas hotell trondheim">
+        <h2>Rethymnon spa & resort</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Hellas hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 8500kr</h3>
+                <h3>&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Trondheim</h3>
+                <h3>Destinasjon: Hellas</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/rethymnonHotell.html" class="btn btn-default btn-lg" role="button">Se
+                    hotell</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="alle hellas leilighet trondheim">
+        <h2>Kos apartments</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Hellas hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 3500kr</h3>
+                <h3>&#9733;&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Trondheim</h3>
+                <h3>Destinasjon: Hellas</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/kosLeilighet.html" class="btn btn-default btn-lg" role="button">Se
+                    leilighet</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="alle hellas leilighet oslo">
+        <h2>Agia Marina apartments</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Hellas hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 5000kr</h3>
+                <h3>&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Oslo</h3>
+                <h3>Destinasjon: Hellas</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/chaniaLeilighet.html" class="btn btn-default btn-lg" role="button">Se
+                    leilighet</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Italia -->
+    <div class="alle italia hotell trondheim">
+        <h2>Sicilia spa & resort</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Portugal hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 6500kr</h3>
+                <h3>&#9733;&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Trondheim</h3>
+                <h3>Destinasjon: Italia</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/siciliaHotell.html" class="btn btn-default btn-lg" role="button">Se hotell</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="alle italia hotell oslo">
+        <h2>Sardinia spa & resort</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Portugal hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 6600kr</h3>
+                <h3>&#9733;&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Oslo</h3>
+                <h3>Destinasjon: Italia</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/sardiniaHotell.html" class="btn btn-default btn-lg" role="button">Se
+                    hotell</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="alle italia leilighet trondheim">
+        <h2>Roma apartments</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Portugal hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 7600kr</h3>
+                <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Trondheim</h3>
+                <h3>Destinasjon: Italia</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/romaLeilighet.html" class="btn btn-default btn-lg" role="button">Se
+                    leilighet</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="alle italia leilighet oslo">
+        <h2>Venezia apartments</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../res/h2.JPG" class="rounded-circle" alt="Portugal hotell" height="125">
+            </div>
+            <div class="col-md-3">
+                <h3>Pris: 5500kr</h3>
+                <h3>&#9733;&#9733;&#9733;&#9733;</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Avreise: Oslo</h3>
+                <h3>Destinasjon: Italia</h3>
+            </div>
+            <div class="col-md-3">
+                <a href="hotell-leilighet/veneziaLeilighet.html" class="btn btn-default btn-lg"
+                   role="button">Se leilighet</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer blir initialisert on load -->
+<div id="footer-placeholder"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+<script src="../js/mainScript.js"></script>
+<script src="../js/formScript.js.js"></script>
+<script>
+    let $searchBtn = $('#searchBtn').click(function () {
+
+        let hotell, leilighet, destinasjon, avreise, print;
+        destinasjon = document.getElementById("destinasjonSted");
+        avreise = document.getElementById("destinasjonFra");
+
+        hotell = document.getElementById("hotellCheckBox");
+        leilighet = document.getElementById("leilighetCheckBox");
+
+        print = '';
+
+        //Hvis hotell og leilighet ikke er begge sjekket eller begge ikke sjekket
+        if (leilighet.checked !== hotell.checked) {
+            print += (hotell.checked ? '.hotell' : '');
+            print += (leilighet.checked ? '.leilighet' : '');
+        }
+        if (destinasjon.selectedIndex !== 0) {
+            print += '.' + destinasjon.options[destinasjon.selectedIndex].value;
+        }
+
+        print += '.' + avreise.options[avreise.selectedIndex].value;
+
+
+        if (print === '') print = '.alle';
+
+        let $el = $(print).fadeIn(300);
+        $('#stederListe > div').not($el).hide();
+
+        $searchBtn.removeClass('active');
+        $(this).addClass('active');
+    });
+
+
+    $('#datepicker').datepicker({
+        minDate: 0
+    });
+</script>
+</body>
+</html>

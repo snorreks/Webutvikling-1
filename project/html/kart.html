@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <title>Kart</title>
+    <meta charset="utf-8">
+    <meta property="og:title" content="Chartertur Divine"/>
+    <meta name="description" content="Billige charterturer"/>
+    <meta name="keywords" content="Chartertur, Spania, Italia, Tyrkia, Hellas"/>
+    <meta name="author" content="Snorre Strand, Julie Solem & Yvonne Soltveit"/>
+    <meta property="og:description" content="Billige charterturer til fire destinasjoner"/>
+    <meta property="og:image" content="../res/logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="../css/formStyle.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Iconer fra fontawesome og material -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+
+        a[href^="http://maps.google.com/maps"] {
+            display: none !important
+        }
+
+        a[href^="https://maps.google.com/maps"] {
+            display: none !important
+        }
+
+        .gmnoprint a, .gmnoprint span, .gm-style-cc {
+            display: none;
+        }
+
+        .gmnoprint div {
+            background: none !important;
+        }
+
+        #map {
+            height: 80%;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #infoWindow img {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            height: 90px;
+        }
+
+    </style>
+</head>
+<body onload="initMap()">
+<div id="nav-placeholder"></div>
+
+<div id="map"></div>
+<!-- footer blir initialisert on load -->
+<div id="footer-placeholder"></div>
+
+<!-- Legger til egen google API kode -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDMuxoz7TANRgcpTrK5rJiIAclynETNHI"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+<script src="../js/mainScript.js"></script>
+<script src="../js/kartScript.js"></script>
+</body>
+</html>

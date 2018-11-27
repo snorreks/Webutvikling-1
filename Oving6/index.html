@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+
+
+<h1 class="center">Registrer HEBIP-klubben</h1>
+<br>
+<br>
+
+<div class="form">
+
+    <form name="formHorse">
+        Fornavn: <input type="text" name="firstname"
+                        onsubmit="return validateName(document.forms['formHorse']['firstname'].value)" required>
+        <br>
+        Ettnavn: <input type="text" name="lastname"
+                        onblur="return validateName(document.forms['formHorse']['lastname'].value)" required>
+        <br>
+        Alder: <input type="date" name="age" max="return getDate()" onblur="return validateAge()" required>
+        <br>
+        <input type="radio" name="member" value="true" required>Medlemm
+        <input type="radio" name="member" checked="checked" value="false"> Ikke medlemm
+        <br>
+        Brukernavn: <input type="text" name="username"
+                           onblur="return validateUsername(document.forms['formHorse']['username'].value)" required>
+        <br>
+        Passord: <input type="password" name="password" required>
+        <br>
+        Gjenta passord: <input type="password" name="confpassword" onblur="return validatePassword()" required>
+        <br>
+        Skriv hvorfor du liker hester:
+        <br>
+        <textarea name="desc"></textarea>
+        <br>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+    </form>
+
+</div>
+</body>
+</html>

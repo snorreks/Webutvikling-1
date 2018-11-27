@@ -1,0 +1,55 @@
+body {
+    font-family: Arial;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+/* NAVIGATION SIDEBAR */
+.sidenav {
+    background-color: lightgrey;
+}
+
+/* Gjør sidenaven synelig på mobil */
+@media (max-width: 477px) {
+    .sidenav {
+        position: relative;
+        margin-top: 50px;
+    }
+}
+
+.row {
+    padding: 10px;
+}
+
+.sidenav a {
+    padding: 10px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: white;
+}
+
+.main {
+    margin-left: 250px;
+    padding: 10px 10px;
+}
+
+/* Nedtelling */
+
+#countdown {
+    text-align: left;
+    font-size: 25px;
+    margin-top: 10px;
+}
